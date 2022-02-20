@@ -1,0 +1,17 @@
+body {background-color: #EFF0F3!important;}
+.container {
+margin-top: 50px;                    /*оступ и ширина*/
+width: 25%!important;
+}
+form{
+    background: #2FCC9A;          /*Задний фон формы*/
+    border: 2px solid #228e6c;    /*Обводка*/
+    border-radius: 10px;            /*Скругление уголков*/
+    padding: 20px 10px;             /*Внутренние отступы*/
+}
+#task{
+    width: 60%;                     /*Стили для текстового поля*/
+    float: left;                    
+    margin-right: 5%;               
+}
+
