@@ -14,13 +14,16 @@
     <form action="/about.php" method="POST">
     <input type="text" name="task" id="task" placeholder="Нужно сделать .." class="form-control">
     <button type="submit" name="sendTask" class="btn btn-success"> Отправить </button>
+    </form>
+    
     <?php
     require 'configBD.php';
+    
+    echo '<ul >';
     $query=$mysql->query('SELECT *FROM `tasks`');
-    echo '<ul>';
     while($row=$query->fetch_object())
     {
-        echo '<li><b>'.$row->tasks.'</b></li>';
+        echo '<li><b>'.$row->tasks.'</b><a href="/delete.php?id='.$row->id.'"><button>Удалить</button></a></li>';
     }
 
     echo '</ul>'
